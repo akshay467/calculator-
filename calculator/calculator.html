@@ -1,0 +1,17 @@
+<template>
+    <div class="calculator">
+        <div class="screen">
+            <input type="text" readonly value={result} />
+        </div>
+        <div class="buttons">
+            <template for:each={buttons} for:item="button">
+                <lightning-button
+                    key={button.label}
+                    label={button.label}
+                    value={button.value}
+                    onclick={handleButtonClick}
+                ></lightning-button>
+            </template>
+        </div>
+    </div>
+</template>
